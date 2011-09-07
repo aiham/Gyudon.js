@@ -112,8 +112,9 @@ $min_generator = sprintf(
 );
 
 $license_text = file_get_contents($license_file);
-$content = $license_text . "\n" . $generator . $content;
-$min_content = $license_text . "\n" . $min_generator . $min_content;
+$license_text = "/*\n" . preg_replace('/^(.*)$/m', ' * $1', trim($license_text)) . "\n */\n\n";
+$content = $license_text . $generator . $content;
+$min_content = $license_text . $min_generator . $min_content;
 
 // TODO - should empty build directory first
 
