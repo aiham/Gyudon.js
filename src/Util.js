@@ -85,7 +85,7 @@
         n = 0;
         if (typeof fromIndex !== 'undefined') {
           n = Number(fromIndex);
-          if (isNaN(n)) {// shortcut for verifying if it's NaN
+          if (n === null || isNaN(n)) {
             n = 0;
           } else if (n !== 0 && n !== Infinity && n !== -Infinity) {
             n = (n > 0 || -1) * Math.floor(Math.abs(n));
