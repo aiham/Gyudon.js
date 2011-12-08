@@ -244,7 +244,7 @@
         return this.binds_enabled;
       },
 
-      containsPos: function () {
+      containsGlobalPoint: function () {
         return true;
       },
     

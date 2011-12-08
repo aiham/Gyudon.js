@@ -79,7 +79,7 @@
         return this;
       },
 
-      containsPos: function () {
+      containsGlobalPoint: function () {
         return false;
       },
     
