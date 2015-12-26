@@ -1,0 +1,108 @@
+<!doctype html>
+<!-- Hi! Why are you looking here? :P I made this page really quickly just so I can put something online for Gyudon.js so please excuse how basic it all is. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Gyudon.js - Object Oriented Javascript Canvas Library</title>
+    <link rel="stylesheet" href="style.css" media="all">
+  </head>
+  <body>
+    <div id="container">
+      <!-- Hooray for unobtrusive Javascript -->
+      <script>document.getElementById('container').style.display = 'none';</script>
+      <header>
+        <h1>Gyudon.js</h1>
+        <h3>mmm...gyudon, yum!</h3>
+        <p>by <a href="http://www.aiham.net/">Aiham Hammami</a></p>
+      </header>
+      <section>
+        <h2>About</h2>
+        <p>
+          Gyudon.js is a Javascript library that lets you quickly and easily create objected oriented animated canvases. Using this easy to use library you can quickly create games and applications without relying on Flash and other browser plugins, making the most of what modern browsers have to offer natively. Check out the <a href="http://apps.aiham.net/dymaxion/">Dymaxion Puzzle Game</a> that I created in less than a week (in my spare time) for a competition. It shows you what is possible to create with Gyudon.js in such a short amount of time.
+        </p>
+        <p>
+          It's named after the delicious Japanese fast food, <a href="http://en.wikipedia.org/wiki/Gyudon">Gyudon</a> (beef bowl).
+        </p>
+      </section>
+      <section>
+        <h2>News</h2>
+        <ul>
+          <li><time datetime="2012-06-15">15<sup>th</sup> June 2012</time> - Added The Solar System to the demos section</li>
+          <li><time datetime="2011-10-23">23<sup>th</sup> October 2011</time> - Added Petri Dish to the demos section</li>
+          <li><time datetime="2011-09-06">6<sup>th</sup> September 2011</time> - Uploaded source for Gyudon.js library and this website to github. You can find links to the repositories below.</li>
+          <li><time datetime="2011-08-13">13<sup>th</sup> August 2011</time> - Released initial version 0.1. However, its unfinished and this is a very rushed and premature release. I want to clean it up some more before releasing the next version, putting it up on github and organising documentation.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Demo</h2>
+        <p>
+          You can see a working example of Gyudon.js as a game I created for Open Call for Google Developer Day 2011:
+        </p>
+        <p>
+          <a href="http://apps.aiham.net/dymaxion/">Dymaxion Puzzle Game</a>
+        </p>
+        <p>
+          I also created a simple experiment with animated circles:
+        </p>
+        <p>
+          <a href="http://apps.aiham.net/petridish/">Petri Dish</a>
+        </p>
+        <p>
+          Here is a representation of our solar system using Gyudon.js:
+        </p>
+        <p>
+          <a href="http://apps.aiham.net/solarsystemjs/">The Solar System</a>
+        </p>
+      </section>
+      <section>
+        <h2>Download</h2>
+        <ul>
+          <li>v0.1 - <a href="https://raw.githubusercontent.com/aiham/Gyudon.js/master/build/gyudon.min.js" download="gyudon-0.1.min.js">Compressed</a> / <a href="https://raw.githubusercontent.com/aiham/Gyudon.js/master/build/gyudon.js" download="gyudon-0.1.js">Uncompressed</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Contribute</h2>
+        <p>I have created the following github repository to allow for collaboration on Gyudon.js:</p>
+        <ul>
+          <li>Gyudon.js Javascript library - <a href="https://github.com/aiham/Gyudon.js">https://github.com/aiham/Gyudon.js</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>License</h2>
+        <p>You may use Gyudon.js under the terms of the <span id="license_link">MIT License</span>.</p>
+        <div id="license" name="license">
+          <p>Copyright (c) 2011 Aiham Hammami</p>
+
+          <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+          <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+          <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </div>
+      </section>
+      <footer>
+        <time datetime="2012-06-15">Last modified 15<sup>th</sup> June 2012</time>
+      </footer>
+    </div>
+    <script src="http://files.aiham.net/js/jquery-1.5.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var container = $('#container'), license = $('#license'), link = $('#license_link');
+        if (window.location.hash === '#license') {
+          container.show();
+        } else {
+          license.hide();
+          window.setTimeout(function () {
+            container.slideDown('slow');
+          }, 500);
+        }
+        link.replaceWith(
+          $('<a>').attr('href', '#license').text(link.text()).
+            click(function (e) {
+              license.toggle();
+            })
+        );
+      });
+    </script>
+  </body>
+</html>
