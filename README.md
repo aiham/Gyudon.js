@@ -1,10 +1,10 @@
-Gyudon.js v0.1 by Aiham Hammami
+# Gyudon.js
 
-Changelog
+## Changelog
 2011.09.08 - v0.1
  - Added to github
 
-To do
+## To do
 - Finish this read me
 - Add tests
 - Add reference docs
