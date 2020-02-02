@@ -1,0 +1,37 @@
+body {
+  background: white;
+  color: black;
+  font-family: serif;
+  padding: 20px;
+  text-align: justify;
+}
+div#container {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  padding: 20px;
+}
+a {
+  color: blue;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+header p {
+  text-align: right;
+}
+header h1, header h3 {
+  text-align: center;
+}
+section p {
+  margin-left: 30px;
+}
+section p, li {
+  margin-right: 30px;
+}
+footer {
+  text-align: right;
+  margin-top: 40px;
+}
